@@ -4,6 +4,7 @@
  */
 package lab6p2_luisvarela;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,6 +19,7 @@ public class jugador {
     private int saldo;
     private String usuario;
     private String contrasena;
+    private ArrayList<carro>c=new ArrayList();
 
     public jugador(String nombre, String correo, String pais_residencia, Date nacimiento, String usuario, String contrasena) {
         this.nombre = nombre;
