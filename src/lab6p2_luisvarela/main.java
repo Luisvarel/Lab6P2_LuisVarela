@@ -4,6 +4,10 @@
  */
 package lab6p2_luisvarela;
 
+import java.util.ArrayList;
+import java.util.Date;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Luis Andres Varela
@@ -26,21 +30,242 @@ public class main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        nombre = new javax.swing.JTextField();
+        Correo = new javax.swing.JTextField();
+        Contrasena = new javax.swing.JTextField();
+        fecha = new com.toedter.calendar.JDateChooser();
+        Pais = new javax.swing.JTextField();
+        Usuario = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Fecha de nacimiento:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 180, 20));
+
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Contraseña:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 100, 20));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Correo:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 70, 20));
+
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Pais de residencia:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 160, 20));
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Registro");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, 100, 30));
+
+        jLabel6.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Usuario:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 70, 20));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 262, 710, 10));
+
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Nombre:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 70, 20));
+
+        nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 220, -1));
+
+        Correo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CorreoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 220, -1));
+
+        Contrasena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContrasenaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 220, -1));
+
+        fecha.setToolTipText("");
+        jPanel1.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 220, -1));
+
+        Pais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PaisActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Pais, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 220, -1));
+
+        Usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsuarioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 220, -1));
+
+        jButton1.setText("Listo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreActionPerformed
+
+    private void CorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorreoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CorreoActionPerformed
+
+    private void ContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContrasenaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContrasenaActionPerformed
+
+    private void PaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PaisActionPerformed
+
+    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsuarioActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+//        if (nombre.getText() == null || Correo.getText() == null || Pais.getText() == null || Usuario.getText() == null || Contrasena.getText() == null ) {
+            boolean cumple_edad = validacion_fecha();
+            if (cumple_edad) {
+                boolean nombre_usuario = validacion_nombre_usuario_mismo_nombre();
+                if (nombre_usuario) {
+                    boolean contasena_no_valida = validando_nombre_contasena_2();
+                    if (contasena_no_valida) {
+                        j.add(new jugador(nombre.getText(), Correo.getText(), Pais.getText(), fecha.getDate(), Usuario.getText(), Contrasena.getText()));
+                        JOptionPane.showMessageDialog(this, "Se a registrado exitosamente");
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Este nombre de usuario no es valido porque debe de:\nContener mínimo una letra mayúscula \nUna minúscula\nUn carácter especial");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(this, "Este nombre de usuario ya fue tomado");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Es menor de edad");
+                nombre.setText("");
+                Usuario.setText("");
+                Contrasena.setText("");
+                Correo.setText("");
+                Pais.setText("");
+                fecha.setDate(new Date());
+            }
+//        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+    public boolean validacion_nombre_usuario_mismo_nombre() {
+        for (jugador object : j) {
+            if (object.getUsuario().equals(Usuario.getText())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean validando_nombre_contasena_2() {
+        String c = Contrasena.getText();
+        int mayuscula = 0;
+        int minuscula = 0;
+        int especial = 0;
+        for (int i = 0; i < c.length(); i++) {
+            char letra = c.charAt(i);
+            if ((int) letra >= 97 && (int) letra <= 122) {
+                minuscula++;
+            }
+            if ((int) letra >= 65 && (int) letra <= 90) {
+                mayuscula++;
+            }
+            if ((int) letra >= 33 && (int) letra <= 47) {
+                especial++;
+            }
+            if ((int) letra >= 58 && (int) letra <= 64) {
+                especial++;
+            }
+        }
+        if (mayuscula == 0 || minuscula == 0 || especial == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public boolean validacion_fecha() {
+        Date nacimiento = fecha.getDate();
+        int year = nacimiento.getYear() + 1900, dia = nacimiento.getDay(), mes = nacimiento.getMonth() + 1;
+        System.out.println("year" + year);
+        System.out.println("mes" + mes);
+        Date hoy = new Date();
+        int year1 = hoy.getYear() + 1900, dia1 = hoy.getDay(), mes1 = hoy.getMonth() + 1, diferencia = 0;
+        while (year1 > year) {
+            year1--;
+            diferencia++;
+        }
+        System.out.println(diferencia);
+        if (mes1 >= mes) {
+            if (dia1 >= dia && mes1 == mes) {
+            } else if (mes1 == mes) {
+                diferencia--;
+            }
+        } else {
+            diferencia--;
+        }
+        System.out.println(diferencia);
+
+        if (diferencia <= 12) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -76,7 +301,23 @@ public class main extends javax.swing.JFrame {
             }
         });
     }
-
+    ArrayList<jugador> j = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Contrasena;
+    private javax.swing.JTextField Correo;
+    private javax.swing.JTextField Pais;
+    private javax.swing.JTextField Usuario;
+    private com.toedter.calendar.JDateChooser fecha;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField nombre;
     // End of variables declaration//GEN-END:variables
 }
