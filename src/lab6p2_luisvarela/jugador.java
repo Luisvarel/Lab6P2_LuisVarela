@@ -4,6 +4,8 @@
  */
 package lab6p2_luisvarela;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,6 +14,7 @@ import java.util.Date;
  * @author Luis Andres Varela
  */
 public class jugador {
+
     private String nombre;
     private String correo;
     private String pais_residencia;
@@ -19,7 +22,7 @@ public class jugador {
     private int saldo;
     private String usuario;
     private String contrasena;
-    private ArrayList<carro>c=new ArrayList();
+    private ArrayList<carro> c = new ArrayList();
 
     public jugador(String nombre, String correo, String pais_residencia, Date nacimiento, String usuario, String contrasena) {
         this.nombre = nombre;
@@ -89,7 +92,7 @@ public class jugador {
 
     @Override
     public String toString() {
-        return "jugador{" + "nombre=" + nombre + ", correo=" + correo + ", pais_residencia=" + pais_residencia + ", nacimiento=" + nacimiento + '}';
+        return "Usuario:"+usuario;
     }
-    
+
 }
